@@ -113,7 +113,7 @@
 </script>
 </head>
 
-<body id=" page-top">
+<body id="page-top">
 
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P948MRGL" height="0" width="0"
@@ -444,200 +444,150 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
   <!-- Core theme JS-->
   <script src="js/scripts.js"></script>
-  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-  <!-- * *                               SB Forms JS                               * *-->
-  <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-  <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+  <!-- Enhanced JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Enhanced navbar behavior
+      const navbar = document.getElementById('mainNav');
+      const navbarHeight = navbar.offsetHeight;
 
-  // Add this enhanced JavaScript to your site
-  // Place before closing
-</body> tag
+      // Smooth scroll with offset for fixed navbar
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
 
-document.addEventListener('DOMContentLoaded', function() {
-// Enhanced navbar behavior
-const navbar = document.getElementById('mainNav');
-const navbarHeight = navbar.offsetHeight;
+          if (targetElement) {
+            const targetPosition = targetElement.offsetTop - navbarHeight - 20;
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
 
-// Smooth scroll with offset for fixed navbar
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-anchor.addEventListener('click', function (e) {
-e.preventDefault();
-const targetId = this.getAttribute('href');
-const targetElement = document.querySelector(targetId);
+      // Navbar shrink effect with better performance
+      let isNavbarShrunk = false;
 
-if (targetElement) {
-const targetPosition = targetElement.offsetTop - navbarHeight - 20;
-window.scrollTo({
-top: targetPosition,
-behavior: 'smooth'
-});
-}
-});
-});
+      function handleScroll() {
+        const shouldShrink = window.scrollY > 100;
 
-// Navbar shrink effect with better performance
-let isNavbarShrunk = false;
+        if (shouldShrink !== isNavbarShrunk) {
+          isNavbarShrunk = shouldShrink;
+          navbar.classList.toggle('navbar-shrink', shouldShrink);
+        }
+      }
 
-function handleScroll() {
-const shouldShrink = window.scrollY > 100;
+      // Throttle scroll events for better performance
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(handleScroll);
+          ticking = true;
+          setTimeout(() => { ticking = false; }, 16);
+        }
+      });
 
-if (shouldShrink !== isNavbarShrunk) {
-isNavbarShrunk = shouldShrink;
-navbar.classList.toggle('navbar-shrink', shouldShrink);
-}
-}
+      // Form validation and submission
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', async function (e) {
+          e.preventDefault();
 
-// Throttle scroll events for better performance
-let ticking = false;
-window.addEventListener('scroll', () => {
-if (!ticking) {
-requestAnimationFrame(handleScroll);
-ticking = true;
-setTimeout(() => { ticking = false; }, 16);
-}
-});
+          // Show loading state
+          const submitBtn = this.querySelector('button[type="submit"]');
+          const originalText = submitBtn.textContent;
+          submitBtn.textContent = 'Sending...';
+          submitBtn.disabled = true;
 
-// Form validation and submission
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-contactForm.addEventListener('submit', async function(e) {
-e.preventDefault();
+          try {
+            const formData = new FormData(this);
+            const response = await fetch('/', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: new URLSearchParams(formData).toString()
+            });
 
-// Show loading state
-const submitBtn = this.querySelector('button[type="submit"]');
-const originalText = submitBtn.textContent;
-submitBtn.textContent = 'Sending...';
-submitBtn.disabled = true;
+            if (response.ok) {
+              showNotification('Thank you! Your message has been sent.', 'success');
+              this.reset();
+            } else {
+              throw new Error('Network response was not ok');
+            }
+          } catch (error) {
+            showNotification('Sorry, there was an error sending your message. Please try again.', 'error');
+          } finally {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+          }
+        });
+      }
 
-try {
-const formData = new FormData(this);
-const response = await fetch('/', {
-method: 'POST',
-headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-body: new URLSearchParams(formData).toString()
-});
+      // Notification system
+      function showNotification(message, type = 'info') {
+        const notification = document.createElement('div');
+        notification.className = `alert alert-${type === 'success' ? 'success' : 'danger'} position-fixed`;
+        notification.style.cssText = `
+          top: 20px;
+          right: 20px;
+          z-index: 9999;
+          opacity: 0;
+          transform: translateX(100%);
+          transition: all 0.3s ease;
+          max-width: 400px;
+        `;
+        notification.textContent = message;
 
-if (response.ok) {
-showNotification('Thank you! Your message has been sent.', 'success');
-this.reset();
-} else {
-throw new Error('Network response was not ok');
-}
-} catch (error) {
-showNotification('Sorry, there was an error sending your message. Please try again.', 'error');
-} finally {
-submitBtn.textContent = originalText;
-submitBtn.disabled = false;
-}
-});
-}
+        document.body.appendChild(notification);
 
-// Notification system
-function showNotification(message, type = 'info') {
-const notification = document.createElement('div');
-notification.className = `alert alert-${type === 'success' ? 'success' : 'danger'} position-fixed`;
-notification.style.cssText = `
-top: 20px;
-right: 20px;
-z-index: 9999;
-opacity: 0;
-transform: translateX(100%);
-transition: all 0.3s ease;
-max-width: 400px;
-`;
-notification.textContent = message;
+        // Animate in
+        setTimeout(() => {
+          notification.style.opacity = '1';
+          notification.style.transform = 'translateX(0)';
+        }, 100);
 
-document.body.appendChild(notification);
+        // Auto-remove after 5 seconds
+        setTimeout(() => {
+          notification.style.opacity = '0';
+          notification.style.transform = 'translateX(100%)';
+          setTimeout(() => notification.remove(), 300);
+        }, 5000);
+      }
 
-// Animate in
-setTimeout(() => {
-notification.style.opacity = '1';
-notification.style.transform = 'translateX(0)';
-}, 100);
+      // Add scroll-to-top button
+      const scrollToTopBtn = document.createElement('button');
+      scrollToTopBtn.innerHTML = '<i class="bi bi-arrow-up"></i>';
+      scrollToTopBtn.className = 'btn btn-primary position-fixed';
+      scrollToTopBtn.style.cssText = `
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      `;
+      document.body.appendChild(scrollToTopBtn);
 
-// Auto-remove after 5 seconds
-setTimeout(() => {
-notification.style.opacity = '0';
-notification.style.transform = 'translateX(100%)';
-setTimeout(() => notification.remove(), 300);
-}, 5000);
-}
+      scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
 
-// Lazy loading for images
-if ('IntersectionObserver' in window) {
-const imageObserver = new IntersectionObserver((entries) => {
-entries.forEach(entry => {
-if (entry.isIntersecting) {
-const img = entry.target;
-img.src = img.dataset.src;
-img.classList.remove('lazy');
-imageObserver.unobserve(img);
-}
-});
-});
+      // Show/hide scroll-to-top button
+      window.addEventListener('scroll', () => {
+        const shouldShow = window.scrollY > 300;
+        scrollToTopBtn.style.opacity = shouldShow ? '1' : '0';
+        scrollToTopBtn.style.visibility = shouldShow ? 'visible' : 'hidden';
+      });
+    });
+  </script>
+</body>
 
-document.querySelectorAll('img[data-src]').forEach(img => {
-imageObserver.observe(img);
-});
-}
-
-// Add scroll-to-top button
-const scrollToTopBtn = document.createElement('button');
-scrollToTopBtn.innerHTML = '<i class="bi bi-arrow-up"></i>';
-scrollToTopBtn.className = 'btn btn-primary position-fixed';
-scrollToTopBtn.style.cssText = `
-bottom: 20px;
-right: 20px;
-z-index: 1000;
-border-radius: 50%;
-width: 50px;
-height: 50px;
-opacity: 0;
-visibility: hidden;
-transition: all 0.3s ease;
-`;
-document.body.appendChild(scrollToTopBtn);
-
-scrollToTopBtn.addEventListener('click', () => {
-window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-// Show/hide scroll-to-top button
-window.addEventListener('scroll', () => {
-const shouldShow = window.scrollY > 300;
-scrollToTopBtn.style.opacity = shouldShow ? '1' : '0';
-scrollToTopBtn.style.visibility = shouldShow ? 'visible' : 'hidden';
-});
-
-// Add loading animations for stats
-const statsElements = document.querySelectorAll('[data-stat]');
-const statsObserver = new IntersectionObserver((entries) => {
-entries.forEach(entry => {
-if (entry.isIntersecting) {
-animateCounter(entry.target);
-statsObserver.unobserve(entry.target);
-}
-});
-});
-
-statsElements.forEach(el => statsObserver.observe(el));
-
-function animateCounter(element) {
-const target = parseInt(element.dataset.stat);
-let current = 0;
-const increment = target / 60; // 1 second duration at 60fps
-
-const timer = setInterval(() => {
-current += increment;
-if (current >= target) {
-current = target;
-clearInterval(timer);
-}
-element.textContent = Math.floor(current);
-}, 16);
-}
-});
+</html>
 </body>
 
 </html>
