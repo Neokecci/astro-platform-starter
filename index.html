@@ -58,6 +58,59 @@
   <meta name="twitter:image" content="https://neokecci.com/assets/img/og-image.jpg" />
   <meta name="twitter:description"
     content="Empowering the Niger Delta through enterprise development, training, and impact projects." />
+
+  <!-- Add these security headers to your HTML head section -->
+
+  <!-- Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://www.googletagmanager.com https://cdn.startbootstrap.com;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net;
+  font-src 'self' https://fonts.gstatic.com;
+  img-src 'self' data: https:;
+  connect-src 'self' https:;
+  frame-ancestors 'none';
+">
+
+  <!-- Additional security headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+  <!-- Improved accessibility -->
+  <meta name="theme-color" content="#f4623a">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Enhanced PWA support -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Neokecci">
+
+  <!-- Structured data for SEO -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Neokecci Multiconcepts Company Limited",
+  "url": "https://neokecci.com",
+  "logo": "https://neokecci.com/assets/img/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+234-8100122122",
+    "contactType": "customer service",
+    "email": "info.neokecci@gmail.com"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Rivers State",
+    "addressCountry": "NG"
+  },
+  "foundingDate": "2005",
+  "description": "Enterprise Development, Training, and Impact Assessment in the Niger Delta."
+}
+</script>
 </head>
 
 <body id=" page-top">
@@ -325,36 +378,56 @@
   </section>
 
   <!-- Contact-->
-  <section class="page-section bg-dark text-white" id="contact">
-    <div class="container px-4 px-lg-5 text-center">
-      <h2 class="mb-4">Contact Us</h2>
-
-      <div style="position:relative; padding-bottom:1500px; height:0; overflow:hidden; max-width:100%;">
-        <form name="contact" method="POST" data-netlify="true">
-          <div class="row mb-3">
-            <div class="col-md-6 mb-3">
-              <input type="text" name="name" class="form-control" placeholder="Your Name" required />
-            </div>
-            <div class="col-md-6 mb-3">
-              <input type="email" name="email" class="form-control" placeholder="Your Email" required />
-            </div>
-            <div class="col-12 mb-3">
-              <textarea name="message" rows="4" class="form-control" placeholder="Your Message" required></textarea>
-            </div>
-            <div class="col-12">
-              <button type="submit" class="btn btn-light btn-xl">Send Message</button>
-            </div>
-          </div>
-        </form>
-
+  <!-- Replace your current contact form section with this -->
+  <section class="page-section" id="contact">
+    <div class="container px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-lg-8 col-xl-6 text-center">
+          <h2 class="mt-0">Let's Get In Touch!</h2>
+          <hr class="divider" />
+          <p class="text-muted mb-5">Ready to start your next project with us? Send us a message and we will get back to
+            you as soon as possible!</p>
+        </div>
       </div>
-
-
-      <p class="mt-4 text-white">
-        Or email us directly at
-        <a href="mailto:info.neokecci@gmail.com" class="text-white">info.neokecci@gmail.com</a><br />
-        <strong>Phone:</strong> <a href="tel:+2348100122122" class="text-white">+234-8100122122</a>
-      </p>
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-lg-6">
+          <form name="contact" method="POST" data-netlify="true" id="contactForm">
+            <div class="form-floating mb-3">
+              <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." required />
+              <label for="name">Full name</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com"
+                required />
+              <label for="email">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890" />
+              <label for="phone">Phone number</label>
+            </div>
+            <div class="form-floating mb-3">
+              <textarea class="form-control" id="message" name="message" placeholder="Enter your message here..."
+                style="height: 150px" required></textarea>
+              <label for="message">Message</label>
+            </div>
+            <div class="d-grid">
+              <button class="btn btn-primary btn-xl" type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row gx-4 gx-lg-5 justify-content-center mt-4">
+        <div class="col-lg-4 text-center mb-5 mb-lg-0">
+          <i class="bi-phone fs-2 mb-3 text-muted"></i>
+          <div>+234-8100122122</div>
+        </div>
+        <div class="col-lg-4 text-center mb-5 mb-lg-0">
+          <i class="bi-envelope fs-2 mb-3 text-muted"></i>
+          <div>
+            <a href="mailto:info.neokecci@gmail.com">info.neokecci@gmail.com</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -376,6 +449,195 @@
   <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
   <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
   <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+  // Add this enhanced JavaScript to your site
+  // Place before closing
+</body> tag
+
+document.addEventListener('DOMContentLoaded', function() {
+// Enhanced navbar behavior
+const navbar = document.getElementById('mainNav');
+const navbarHeight = navbar.offsetHeight;
+
+// Smooth scroll with offset for fixed navbar
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+const targetElement = document.querySelector(targetId);
+
+if (targetElement) {
+const targetPosition = targetElement.offsetTop - navbarHeight - 20;
+window.scrollTo({
+top: targetPosition,
+behavior: 'smooth'
+});
+}
+});
+});
+
+// Navbar shrink effect with better performance
+let isNavbarShrunk = false;
+
+function handleScroll() {
+const shouldShrink = window.scrollY > 100;
+
+if (shouldShrink !== isNavbarShrunk) {
+isNavbarShrunk = shouldShrink;
+navbar.classList.toggle('navbar-shrink', shouldShrink);
+}
+}
+
+// Throttle scroll events for better performance
+let ticking = false;
+window.addEventListener('scroll', () => {
+if (!ticking) {
+requestAnimationFrame(handleScroll);
+ticking = true;
+setTimeout(() => { ticking = false; }, 16);
+}
+});
+
+// Form validation and submission
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+contactForm.addEventListener('submit', async function(e) {
+e.preventDefault();
+
+// Show loading state
+const submitBtn = this.querySelector('button[type="submit"]');
+const originalText = submitBtn.textContent;
+submitBtn.textContent = 'Sending...';
+submitBtn.disabled = true;
+
+try {
+const formData = new FormData(this);
+const response = await fetch('/', {
+method: 'POST',
+headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+body: new URLSearchParams(formData).toString()
+});
+
+if (response.ok) {
+showNotification('Thank you! Your message has been sent.', 'success');
+this.reset();
+} else {
+throw new Error('Network response was not ok');
+}
+} catch (error) {
+showNotification('Sorry, there was an error sending your message. Please try again.', 'error');
+} finally {
+submitBtn.textContent = originalText;
+submitBtn.disabled = false;
+}
+});
+}
+
+// Notification system
+function showNotification(message, type = 'info') {
+const notification = document.createElement('div');
+notification.className = `alert alert-${type === 'success' ? 'success' : 'danger'} position-fixed`;
+notification.style.cssText = `
+top: 20px;
+right: 20px;
+z-index: 9999;
+opacity: 0;
+transform: translateX(100%);
+transition: all 0.3s ease;
+max-width: 400px;
+`;
+notification.textContent = message;
+
+document.body.appendChild(notification);
+
+// Animate in
+setTimeout(() => {
+notification.style.opacity = '1';
+notification.style.transform = 'translateX(0)';
+}, 100);
+
+// Auto-remove after 5 seconds
+setTimeout(() => {
+notification.style.opacity = '0';
+notification.style.transform = 'translateX(100%)';
+setTimeout(() => notification.remove(), 300);
+}, 5000);
+}
+
+// Lazy loading for images
+if ('IntersectionObserver' in window) {
+const imageObserver = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+const img = entry.target;
+img.src = img.dataset.src;
+img.classList.remove('lazy');
+imageObserver.unobserve(img);
+}
+});
+});
+
+document.querySelectorAll('img[data-src]').forEach(img => {
+imageObserver.observe(img);
+});
+}
+
+// Add scroll-to-top button
+const scrollToTopBtn = document.createElement('button');
+scrollToTopBtn.innerHTML = '<i class="bi bi-arrow-up"></i>';
+scrollToTopBtn.className = 'btn btn-primary position-fixed';
+scrollToTopBtn.style.cssText = `
+bottom: 20px;
+right: 20px;
+z-index: 1000;
+border-radius: 50%;
+width: 50px;
+height: 50px;
+opacity: 0;
+visibility: hidden;
+transition: all 0.3s ease;
+`;
+document.body.appendChild(scrollToTopBtn);
+
+scrollToTopBtn.addEventListener('click', () => {
+window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Show/hide scroll-to-top button
+window.addEventListener('scroll', () => {
+const shouldShow = window.scrollY > 300;
+scrollToTopBtn.style.opacity = shouldShow ? '1' : '0';
+scrollToTopBtn.style.visibility = shouldShow ? 'visible' : 'hidden';
+});
+
+// Add loading animations for stats
+const statsElements = document.querySelectorAll('[data-stat]');
+const statsObserver = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+animateCounter(entry.target);
+statsObserver.unobserve(entry.target);
+}
+});
+});
+
+statsElements.forEach(el => statsObserver.observe(el));
+
+function animateCounter(element) {
+const target = parseInt(element.dataset.stat);
+let current = 0;
+const increment = target / 60; // 1 second duration at 60fps
+
+const timer = setInterval(() => {
+current += increment;
+if (current >= target) {
+current = target;
+clearInterval(timer);
+}
+element.textContent = Math.floor(current);
+}, 16);
+}
+});
 </body>
 
 </html>
