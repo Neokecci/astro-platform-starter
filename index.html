@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
@@ -14,580 +13,655 @@
     })(window, document, 'script', 'dataLayer', 'GTM-P948MRGL');</script>
   <!-- End Google Tag Manager -->
 
-
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Neokecci Multiconcepts Company Limited – Enterprise Development, Training, and Impact Assessment in the Niger Delta." />
-  <meta name="author" content="Neokecci Multiconcepts" />
-
+    content="Neokecci Multiconcepts Company Limited – Enterprise Development, Training, and Impact Assessment in the Niger Delta.">
+  <meta name="author" content="Neokecci Multiconcepts">
   <title>Neokecci Multiconcepts Company Limited</title>
 
-  <meta name="facebook-domain-verification" content="e0iglf2pc9n6hmob22tyhnw1cjy7ga" />
-
-  <meta name="google-site-verification" content="9yXV_ir0h8o5KGw8N1cDPs_EeZPi-wZLMRwXSXhP468" />
-
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 
   <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400italic,700" rel="stylesheet" />
-
-  <!-- SimpleLightbox plugin CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
-
-  <!-- Core theme CSS -->
-  <link href="css/styles.css" rel="stylesheet" />
-
-  <!-- Open Graph Meta Tags (for Facebook, LinkedIn, etc.) -->
-  <meta property="og:title" content="Neokecci Multiconcepts Company Limited" />
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Neokecci Multiconcepts Company Limited">
   <meta property="og:description"
-    content="Empowering businesses and communities through enterprise development, mentorship, and impactful projects." />
-  <meta property="og:image" content="https://neokecci.com/assets/img/og-image.jpg" />
-  <meta property="og:url" content="https://neokecci.com/" />
-  <meta property="og:type" content="website" />
-  <meta property="fb:app_id" content="1309818593841720" />
+    content="Empowering businesses and communities through enterprise development, mentorship, and impactful projects.">
+  <meta property="og:image" content="https://neokecci.com/assets/img/og-image.jpg">
+  <meta property="og:url" content="https://neokecci.com/">
+  <meta property="og:type" content="website">
+  <meta property="fb:app_id" content="1309818593841720">
 
   <!-- Twitter Card Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Neokecci Multiconcepts Company Limited" />
-  <meta name="twitter:image" content="https://neokecci.com/assets/img/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Neokecci Multiconcepts Company Limited">
   <meta name="twitter:description"
-    content="Empowering the Niger Delta through enterprise development, training, and impact projects." />
+    content="Empowering the Niger Delta through enterprise development, training, and impact projects.">
+  <meta name="twitter:image" content="https://neokecci.com/assets/img/og-image.jpg">
 
-  <!-- Add these security headers to your HTML head section -->
+  <!-- Verification Tags -->
+  <meta name="google-site-verification" content="9yXV_ir0h8o5KGw8N1cDPs_EeZPi-wZLMRwXSXhP468">
+  <meta name="facebook-domain-verification" content="e0iglf2pc9n6hmob22tyhnw1cjy7ga">
 
-  <!-- Content Security Policy -->
-  <meta http-equiv="Content-Security-Policy" content="
-  default-src 'self';
-  script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://www.googletagmanager.com https://cdn.startbootstrap.com;
-  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net;
-  font-src 'self' https://fonts.gstatic.com;
-  img-src 'self' data: https:;
-  connect-src 'self' https:;
-  frame-ancestors 'none';
-">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <!-- Additional security headers -->
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
 
-  <!-- Improved accessibility -->
-  <meta name="theme-color" content="#f4623a">
-  <meta name="color-scheme" content="light dark">
+    /* Navigation */
+    nav {
+      background-color: #fff;
+      padding: 1rem 2rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
 
-  <!-- Enhanced PWA support -->
-  <link rel="manifest" href="/manifest.json">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="Neokecci">
+    nav.navbar-shrink {
+      background-color: #f4623a;
+      padding: 0.5rem 2rem;
+    }
 
-  <!-- Structured data for SEO -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Neokecci Multiconcepts Company Limited",
-  "url": "https://neokecci.com",
-  "logo": "https://neokecci.com/assets/img/logo.png",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+234-8100122122",
-    "contactType": "customer service",
-    "email": "info.neokecci@gmail.com"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "addressRegion": "Rivers State",
-    "addressCountry": "NG"
-  },
-  "foundingDate": "2005",
-  "description": "Enterprise Development, Training, and Impact Assessment in the Niger Delta."
-}
-</script>
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin-right: 2rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav.navbar-shrink a {
+      color: white;
+    }
+
+    nav a:hover {
+      color: #f4623a;
+    }
+
+    nav.navbar-shrink a:hover {
+      color: #fff;
+      opacity: 0.8;
+    }
+
+    nav .brand {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-right: 3rem;
+    }
+
+    /* Main content spacing */
+    main {
+      margin-top: 70px;
+    }
+
+    /* Sections */
+    section {
+      padding: 4rem 2rem;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #f4623a;
+      text-align: center;
+    }
+
+    section p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+
+    /* Hero Section */
+    #hero {
+      background: linear-gradient(135deg, #f4623a 0%, #c34e2e 100%);
+      color: white;
+      padding: 8rem 2rem;
+      text-align: center;
+      margin-top: 0;
+      max-width: 100%;
+    }
+
+    #hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    #hero p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    #hero hr {
+      height: 3px;
+      background-color: #fff;
+      max-width: 100px;
+      margin: 1rem auto;
+      opacity: 0.8;
+      border: none;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      background-color: #f4623a;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #c34e2e;
+      transform: translateY(-2px);
+    }
+
+    .btn-light {
+      background-color: white;
+      color: #f4623a;
+    }
+
+    .btn-light:hover {
+      background-color: #f0f0f0;
+      color: #c34e2e;
+    }
+
+    /* Section backgrounds */
+    #about {
+      background-color: #f4623a;
+      color: white;
+      max-width: 100%;
+    }
+
+    #about h2 {
+      color: white;
+    }
+
+    #about a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    #services {
+      background-color: #f9f9f9;
+    }
+
+    #programmes-cta {
+      background-color: #212529;
+      color: white;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    #programmes-cta h2 {
+      color: #f4623a;
+    }
+
+    #contact {
+      background-color: #f9f9f9;
+    }
+
+    /* Grid for facts and services */
+    .facts-grid,
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .fact-card,
+    .service-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .fact-card {
+      border-top: 4px solid #f4623a;
+    }
+
+    .fact-card:hover,
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .fact-card h3,
+    .service-card h3 {
+      color: #f4623a;
+      margin-bottom: 0.5rem;
+    }
+
+    .fact-card h3 {
+      font-size: 2rem;
+    }
+
+    .fact-card p,
+    .service-card p {
+      color: #333;
+    }
+
+    .fact-card small {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    /* Icons */
+    .icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #f4623a;
+    }
+
+    /* Form styling */
+    form {
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+
+    form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      outline: none;
+      border-color: #f4623a;
+      box-shadow: 0 0 0 3px rgba(244, 98, 58, 0.1);
+    }
+
+    /* Contact info */
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .contact-item {
+      padding: 2rem;
+    }
+
+    .contact-item i {
+      font-size: 2.5rem;
+      color: #f4623a;
+      margin-bottom: 1rem;
+    }
+
+    .contact-item a {
+      color: #f4623a;
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #212529;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    /* Scroll to top button */
+    .scroll-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #f4623a;
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      z-index: 999;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .scroll-to-top:hover {
+      background-color: #c34e2e;
+      transform: translateY(-3px);
+    }
+
+    .scroll-to-top.show {
+      display: flex;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        padding: 0.75rem 1rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 0.5rem 1rem 0.5rem 0;
+        font-size: 0.9rem;
+      }
+
+      nav .brand {
+        margin-right: 1rem;
+        font-size: 1rem;
+      }
+
+      #hero h1 {
+        font-size: 1.8rem;
+      }
+
+      section {
+        padding: 2rem 1rem;
+      }
+
+      section h2 {
+        font-size: 1.5rem;
+      }
+
+      .facts-grid,
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
-<body id="page-top">
-
+<body>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P948MRGL" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- Navigation-->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-    <div class="container px-4 px-lg-5">
-      <a class="navbar-brand" href="#page-top">Neokecci Multiconcepts</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-        aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ms-auto my-2 my-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="programmes.html">Programmes</a></li>
-
-        </ul>
-      </div>
-    </div>
+  <!-- Navigation -->
+  <nav id="mainNav">
+    <a href="#" class="brand">Neokecci Multiconcepts</a>
+    <a href="#about">About</a>
+    <a href="#facts">Facts</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <a href="programmes.html">Programmes</a>
   </nav>
-  <!-- Masthead-->
-  <header class="masthead">
-    <div class="container px-4 px-lg-5 h-100">
-      <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-        <div class="col-lg-8 align-self-end">
-          <h1 class="text-white font-weight-bold">Your Trusted Business Education and Training Consultancy Partner</h1>
-          <hr class="divider" />
-        </div>
-        <div class="col-lg-8 align-self-baseline">
-          <p class="text-white-75 mb-5 justified">In this era of AI, Neokecci Multiconcepts is here to help you
-            future-proof your
-            business or career!</p>
-          <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- About-->
-  <section class="page-section bg-primary" id="about">
-    <div class="container px-4 px-lg-5">
-      <div class="row gx-4 gx-lg-5 justify-content-center">
-        <div class="col-lg-10 justified">
-          <h2 class="text-white mt-0">About Us</h2>
-          <hr class="divider divider-light" />
-          <p class="text-white-75 mb-4">
-            Neokecci Multiconcepts Company Limited is a Nigerian-based company founded in 2005 and incorporated in 2010
-            (RC 926675). We specialize in sustainable development, capacity building, and enterprise support across the
-            Niger Delta region. We assist multinational organizations in implementing community development projects,
-            impact assessments, and youth and women entrepreneurship programmes.
-          </p>
-          <p class="text-white-75 mb-4">
-            We are accredited Shell LiveWIRE trainers, having trained and mentored over 1,700 entrepreneurs and
-            coordinated over 242 rural development projects valued at over $10 million across 18 Niger Delta
-            communities. Our expertise also includes Monitoring and Evaluation (M&E), capacity building, impact
-            assessment, and business coaching.
-          </p>
-          <p class="text-white-75 mb-4">
-            Currently, Neokecci is implementing the <strong>VIBES (Vocational, Innovation, Business, and Empowerment
-              Scheme)</strong> — a business training, mentorship, and coaching programme powered by Nigeria LNG Limited
-            (NLNG). The programme provides skills development, mentoring, and networking opportunities to both small and
-            large business owners. Visit NLNG’s website (or NLNG VIBES application portal, https://nlngvibes.com/)to
-            participate.
-          </p>
-          <a class="btn btn-light btn-xl" href="#services">Explore Our Services</a>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="page-section" id="facts">
-    <div class="container px-4 px-lg-5">
-      <h2 class="text-center mt-0">Fast Facts</h2>
-      <hr class="divider" />
-      <div class="row gx-4 gx-lg-5">
-        <div class="col-lg-4 col-md-6 text-center mb-5">
-          <div class="mt-5">
-            <div class="mb-3"><i class="bi bi-people-fill fs-1 text-primary"></i></div>
-            <h4 class="h5 mb-2">1700+ Entrepreneurs Trained</h4>
-            <p class="text-muted mb-0">Through Shell LiveWIRE Nigeria across 8 Niger Delta states.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 text-center mb-5">
-          <div class="mt-5">
-            <div class="mb-3"><i class="bi bi-hammer fs-1 text-primary"></i></div>
-            <h4 class="h5 mb-2">242 Projects Delivered</h4>
-            <p class="text-muted mb-0">Coordinated rural development projects worth $10M+ via SPDC GMoU.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 text-center mb-5">
-          <div class="mt-5">
-            <div class="mb-3"><i class="bi bi-broadcast-pin fs-1 text-primary"></i></div>
-            <h4 class="h5 mb-2">400+ Business Radio Shows</h4>
-            <p class="text-muted mb-0">Produced and aired across 5 stations in Rivers, Bayelsa & Delta.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 text-center mb-5">
-          <div class="mt-5">
-            <div class="mb-3"><i class="bi bi-clipboard-data fs-1 text-primary"></i></div>
-            <h4 class="h5 mb-2">Impact Evaluation Expertise</h4>
-            <p class="text-muted mb-0">Conducted M&E for NLNG YES and Shell LiveWIRE beneficiaries.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 text-center mb-5">
-          <div class="mt-5">
-            <div class="mb-3"><i class="bi bi-layers fs-1 text-primary"></i></div>
-            <h4 class="h5 mb-2">Founded in 2005</h4>
-            <p class="text-muted mb-0">Incorporated in 2010 (RC 926675) — operating for nearly two decades.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 text-center mb-5">
-          <div class="mt-5">
-            <div class="mb-3"><i class="bi bi-graph-up fs-1 text-primary"></i></div>
-            <h4 class="h5 mb-2">Current Project: VIBES</h4>
-            <p class="text-muted mb-0">A business training & mentorship programme in partnership with NLNG (2025).</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <main>
+    <!-- Hero Section -->
+    <section id="hero">
+      <h1>Your Trusted Business Education and Training Consultancy Partner</h1>
+      <hr>
+      <p>In this era of AI, Neokecci Multiconcepts is here to help you future-proof your business or career!</p>
+      <a href="#about" class="btn btn-light">Learn More</a>
+    </section>
 
-  <!-- Services-->
-  <section class="page-section" id="services">
-    <div class="container px-4 px-lg-5">
-      <h2 class="text-center mt-0">Our Core Services</h2>
-      <hr class="divider" />
-      <div class="row gx-4 gx-lg-5">
-        <div class="col-lg-4 col-md-6 text-center mb-5">
-          <div class="mt-5">
-            <div class="mb-3"><i class="bi bi-lightbulb fs-1 text-primary"></i></div>
-            <h4 class="h5 mb-2">Enterprise Development</h4>
-            <p class="text-muted mb-0 justified">Design and delivery of youth and women-focused entrepreneurship
-              programmes in
-              partnership with multinationals.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 text-center mb-5">
-          <div class="mt-5">
-            <div class="mb-3"><i class="bi bi-mic fs-1 text-primary"></i></div>
-            <h4 class="h5 mb-2">Training & Mentoring</h4>
-            <p class="text-muted mb-0 justified">Customized capacity building, business coaching, and mentorship for
-              startups and
-              SMEs across the Niger Delta.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 text-center mb-5">
-          <div class="mt-5">
-            <div class="mb-3"><i class="bi bi-bar-chart-line fs-1 text-primary"></i></div>
-            <h4 class="h5 mb-2">Monitoring & Evaluation</h4>
-            <p class="text-muted mb-0 justified">Impact assessments and performance reviews of social investment and
-              enterprise
-              programmes.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 text-center mb-5">
-          <div class="mt-5">
-            <div class="mb-3"><i class="bi bi-globe fs-1 text-primary"></i></div>
-            <h4 class="h5 mb-2">Community Projects</h4>
-            <p class="text-muted mb-0 justified">Project design, coordination, and implementation for rural development
-              and
-              infrastructure delivery.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 text-center mb-5">
-          <div class="mt-5">
-            <div class="mb-3"><i class="bi bi-megaphone fs-1 text-primary"></i></div>
-            <h4 class="h5 mb-2">Media & Radio Production</h4>
-            <p class="text-muted mb-0 justified">Development of business-oriented radio/TV shows, including over 400
-              editions of
-              the Small Business Radio Show.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 text-center mb-5">
-          <div class="mt-5">
-            <div class="mb-3"><i class="bi bi-award fs-1 text-primary"></i></div>
-            <h4 class="h5 mb-2">Certification & Accreditation</h4>
-            <p class="text-muted mb-0 justified">Accredited trainers for Shell LiveWIRE and other enterprise support
-              programmes
-              across Africa.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Us</h2>
+      <p>Neokecci Multiconcepts Company Limited is a Nigerian-based company founded in 2005 and incorporated in 2010 (RC
+        926675). We specialize in sustainable development, capacity building, and enterprise support across the Niger
+        Delta region. We assist multinational organizations in implementing community development projects, impact
+        assessments, and youth and women entrepreneurship programmes.</p>
 
-  <!-- Portfolio-->
-  <div id="portfolio">
-    <div class="container-fluid p-0">
-      <div class="row g-0">
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg" title="Project Name">
-            <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg" alt="..." />
-            <div class="portfolio-box-caption">
-              <div class="project-category text-white-50">Category</div>
-              <div class="project-name">Project Name</div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg" title="Project Name">
-            <img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpg" alt="..." />
-            <div class="portfolio-box-caption">
-              <div class="project-category text-white-50">Category</div>
-              <div class="project-name">Project Name</div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg" title="Project Name">
-            <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpg" alt="..." />
-            <div class="portfolio-box-caption">
-              <div class="project-category text-white-50">Category</div>
-              <div class="project-name">Project Name</div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpg" title="Project Name">
-            <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg" alt="..." />
-            <div class="portfolio-box-caption">
-              <div class="project-category text-white-50">Category</div>
-              <div class="project-name">Project Name</div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg" title="Project Name">
-            <img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpg" alt="..." />
-            <div class="portfolio-box-caption">
-              <div class="project-category text-white-50">Category</div>
-              <div class="project-name">Project Name</div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg" title="Project Name">
-            <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg" alt="..." />
-            <div class="portfolio-box-caption p-3">
-              <div class="project-category text-white-50">Category</div>
-              <div class="project-name">Project Name</div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Call to action-->
-  <section class="page-section bg-dark text-white">
-    <div class="container px-4 px-lg-5 text-center">
-      <h2 class="mb-4">Programmes</h2>
-      <a class="btn btn-light btn-xl" href="programmes.html">Explore VIBES & Programmes</a>
-      <p class="mt-4">
-        Join the VIBES programme—powered by NLNG and implemented by Neokecci—for free expert-led training,
-        mentorship, networking, and access to grants and MSME loans. Empower your business and community today!
-      </p>
-      <a class="btn btn-primary btn-xl mt-3" href="https://nlngvibes.com/">Apply Now</a>
-    </div>
-  </section>
+      <p>We are accredited Shell LiveWIRE trainers, having trained and mentored over 1,700 entrepreneurs and coordinated
+        over 242 rural development projects valued at over $10 million across 18 Niger Delta communities. Our expertise
+        also includes Monitoring and Evaluation (M&E), capacity building, impact assessment, and business coaching.</p>
 
-  <!-- Contact-->
-  <!-- Replace your current contact form section with this -->
-  <section class="page-section" id="contact">
-    <div class="container px-4 px-lg-5">
-      <div class="row gx-4 gx-lg-5 justify-content-center">
-        <div class="col-lg-8 col-xl-6 text-center">
-          <h2 class="mt-0">Let's Get In Touch!</h2>
-          <hr class="divider" />
-          <p class="text-muted mb-5">Ready to start your next project with us? Send us a message and we will get back to
-            you as soon as possible!</p>
-        </div>
-      </div>
-      <div class="row gx-4 gx-lg-5 justify-content-center">
-        <div class="col-lg-6">
-          <form name="contact" method="POST" data-netlify="true" id="contactForm">
-            <div class="form-floating mb-3">
-              <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." required />
-              <label for="name">Full name</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com"
-                required />
-              <label for="email">Email address</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890" />
-              <label for="phone">Phone number</label>
-            </div>
-            <div class="form-floating mb-3">
-              <textarea class="form-control" id="message" name="message" placeholder="Enter your message here..."
-                style="height: 150px" required></textarea>
-              <label for="message">Message</label>
-            </div>
-            <div class="d-grid">
-              <button class="btn btn-primary btn-xl" type="submit">Submit</button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="row gx-4 gx-lg-5 justify-content-center mt-4">
-        <div class="col-lg-4 text-center mb-5 mb-lg-0">
-          <i class="bi-phone fs-2 mb-3 text-muted"></i>
-          <div>+234-8100122122</div>
-        </div>
-        <div class="col-lg-4 text-center mb-5 mb-lg-0">
-          <i class="bi-envelope fs-2 mb-3 text-muted"></i>
-          <div>
-            <a href="mailto:info.neokecci@gmail.com">info.neokecci@gmail.com</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      <p>Currently, Neokecci is implementing the <strong>VIBES (Vocational, Innovation, Business, and Empowerment
+          Scheme)</strong> — a business training, mentorship, and coaching programme powered by Nigeria LNG Limited
+        (NLNG). The programme provides skills development, mentoring, and networking opportunities to both small and
+        large business owners. Visit the <a href="https://nlngvibes.com/" target="_blank">NLNG VIBES application
+          portal</a> to participate.</p>
+    </section>
 
+    <!-- Fast Facts Section -->
+    <section id="facts">
+      <h2>Fast Facts</h2>
+      <div class="facts-grid">
+        <div class="fact-card">
+          <h3>1700+</h3>
+          <p>Entrepreneurs Trained</p>
+          <small>Through Shell LiveWIRE Nigeria across 8 Niger Delta states.</small>
+        </div>
 
-  <!-- Footer-->
-  <footer class="bg-light py-5">
-    <div class="container px-4 px-lg-5">
-      <div class="small text-center text-muted">Copyright &copy; 2025 - Neokecci Multiconcepts Company Limited</div>
-    </div>
+        <div class="fact-card">
+          <h3>242</h3>
+          <p>Projects Delivered</p>
+          <small>Coordinated rural development projects worth $10M+ via SPDC GMoU.</small>
+        </div>
+
+        <div class="fact-card">
+          <h3>400+</h3>
+          <p>Business Radio Shows</p>
+          <small>Produced and aired across 5 stations in Rivers, Bayelsa & Delta.</small>
+        </div>
+
+        <div class="fact-card">
+          <h3><i class="bi bi-check-circle"></i></h3>
+          <p>Impact Evaluation Expertise</p>
+          <small>Conducted M&E for NLNG YES and Shell LiveWIRE beneficiaries.</small>
+        </div>
+
+        <div class="fact-card">
+          <h3>20 Years</h3>
+          <p>Founded in 2005</p>
+          <small>Incorporated in 2010 (RC 926675) — operating for nearly two decades.</small>
+        </div>
+
+        <div class="fact-card">
+          <h3><i class="bi bi-star"></i></h3>
+          <p>Current Project: VIBES</p>
+          <small>Business training & mentorship programme in partnership with NLNG (2025).</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+      <h2>Our Core Services</h2>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="bi bi-lightbulb icon"></i>
+          <h3>Enterprise Development</h3>
+          <p>Design and delivery of youth and women-focused entrepreneurship programmes in partnership with
+            multinationals.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="bi bi-mic icon"></i>
+          <h3>Training & Mentoring</h3>
+          <p>Customized capacity building, business coaching, and mentorship for startups and SMEs across the Niger
+            Delta.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="bi bi-bar-chart-line icon"></i>
+          <h3>Monitoring & Evaluation</h3>
+          <p>Impact assessments and performance reviews of social investment and enterprise programmes.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="bi bi-globe icon"></i>
+          <h3>Community Projects</h3>
+          <p>Project design, coordination, and implementation for rural development and infrastructure delivery.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="bi bi-megaphone icon"></i>
+          <h3>Media & Radio Production</h3>
+          <p>Development of business-oriented radio/TV shows, including over 400 editions of the Small Business Radio
+            Show.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="bi bi-award icon"></i>
+          <h3>Certification & Accreditation</h3>
+          <p>Accredited trainers for Shell LiveWIRE and other enterprise support programmes across Africa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programmes CTA Section -->
+    <section id="programmes-cta">
+      <h2>VIBES Programme</h2>
+      <p>Join the VIBES programme—powered by NLNG and implemented by Neokecci—for free expert-led training, mentorship,
+        networking, and access to grants and MSME loans. Empower your business and community today!</p>
+      <a href="programmes.html" class="btn btn-light" style="margin-right: 1rem;">Learn More</a>
+      <a href="https://nlngvibes.com/" target="_blank" class="btn" style="background-color: #f4623a;">Apply Now</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p style="text-align: center; margin-bottom: 2rem;">Ready to work with us? Get in touch and let's discuss your
+        needs.</p>
+
+      <form id="contactForm" name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Your Phone (optional)">
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="bi bi-telephone"></i>
+          <p><strong>Phone</strong></p>
+          <a href="tel:+2348100122122">+234-8100122122</a>
+        </div>
+
+        <div class="contact-item">
+          <i class="bi bi-envelope"></i>
+          <p><strong>Email</strong></p>
+          <a href="mailto:info.neokecci@gmail.com">info.neokecci@gmail.com</a>
+        </div>
+
+        <div class="contact-item">
+          <i class="bi bi-geo-alt"></i>
+          <p><strong>Location</strong></p>
+          <p>Rivers State, Nigeria</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Neokecci Multiconcepts Company Limited. All rights reserved.</p>
   </footer>
-  <!-- Bootstrap core JS-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- SimpleLightbox plugin JS-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-  <!-- Core theme JS-->
-  <script src="js/scripts.js"></script>
-  <!-- Enhanced JavaScript -->
+
+  <!-- Scroll to top button -->
+  <button class="scroll-to-top" id="scrollToTop">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // Enhanced navbar behavior
-      const navbar = document.getElementById('mainNav');
-      const navbarHeight = navbar.offsetHeight;
+      const nav = document.getElementById('mainNav');
+      const scrollToTopBtn = document.getElementById('scrollToTop');
+      const contactForm = document.getElementById('contactForm');
 
-      // Smooth scroll with offset for fixed navbar
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+      // Navbar shrink on scroll
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 100) {
+          nav.classList.add('navbar-shrink');
+        } else {
+          nav.classList.remove('navbar-shrink');
+        }
+
+        // Show/hide scroll to top button
+        if (window.scrollY > 300) {
+          scrollToTopBtn.classList.add('show');
+        } else {
+          scrollToTopBtn.classList.remove('show');
+        }
+      });
+
+      // Scroll to top functionality
+      scrollToTopBtn.addEventListener('click', function () {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+
+      // Smooth scroll for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function (e) {
           e.preventDefault();
-          const targetId = this.getAttribute('href');
-          const targetElement = document.querySelector(targetId);
-
-          if (targetElement) {
-            const targetPosition = targetElement.offsetTop - navbarHeight - 20;
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            const offsetTop = target.offsetTop - 70;
             window.scrollTo({
-              top: targetPosition,
+              top: offsetTop,
               behavior: 'smooth'
             });
           }
         });
       });
 
-      // Navbar shrink effect with better performance
-      let isNavbarShrunk = false;
-
-      function handleScroll() {
-        const shouldShrink = window.scrollY > 100;
-
-        if (shouldShrink !== isNavbarShrunk) {
-          isNavbarShrunk = shouldShrink;
-          navbar.classList.toggle('navbar-shrink', shouldShrink);
-        }
-      }
-
-      // Throttle scroll events for better performance
-      let ticking = false;
-      window.addEventListener('scroll', () => {
-        if (!ticking) {
-          requestAnimationFrame(handleScroll);
-          ticking = true;
-          setTimeout(() => { ticking = false; }, 16);
-        }
-      });
-
-      // Form validation and submission
-      const contactForm = document.getElementById('contactForm');
+      // Contact form handling
       if (contactForm) {
-        contactForm.addEventListener('submit', async function (e) {
-          e.preventDefault();
+        contactForm.addEventListener('submit', function (e) {
+          const btn = this.querySelector('button[type="submit"]');
+          const originalText = btn.textContent;
 
-          // Show loading state
-          const submitBtn = this.querySelector('button[type="submit"]');
-          const originalText = submitBtn.textContent;
-          submitBtn.textContent = 'Sending...';
-          submitBtn.disabled = true;
+          btn.textContent = 'Sending...';
+          btn.disabled = true;
 
-          try {
-            const formData = new FormData(this);
-            const response = await fetch('/', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-              body: new URLSearchParams(formData).toString()
-            });
-
-            if (response.ok) {
-              showNotification('Thank you! Your message has been sent.', 'success');
-              this.reset();
-            } else {
-              throw new Error('Network response was not ok');
-            }
-          } catch (error) {
-            showNotification('Sorry, there was an error sending your message. Please try again.', 'error');
-          } finally {
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-          }
+          // Form will be handled by Netlify
+          // Re-enable button after submission
+          setTimeout(() => {
+            btn.textContent = originalText;
+            btn.disabled = false;
+          }, 2000);
         });
       }
-
-      // Notification system
-      function showNotification(message, type = 'info') {
-        const notification = document.createElement('div');
-        notification.className = `alert alert-${type === 'success' ? 'success' : 'danger'} position-fixed`;
-        notification.style.cssText = `
-          top: 20px;
-          right: 20px;
-          z-index: 9999;
-          opacity: 0;
-          transform: translateX(100%);
-          transition: all 0.3s ease;
-          max-width: 400px;
-        `;
-        notification.textContent = message;
-
-        document.body.appendChild(notification);
-
-        // Animate in
-        setTimeout(() => {
-          notification.style.opacity = '1';
-          notification.style.transform = 'translateX(0)';
-        }, 100);
-
-        // Auto-remove after 5 seconds
-        setTimeout(() => {
-          notification.style.opacity = '0';
-          notification.style.transform = 'translateX(100%)';
-          setTimeout(() => notification.remove(), 300);
-        }, 5000);
-      }
-
-      // Add scroll-to-top button
-      const scrollToTopBtn = document.createElement('button');
-      scrollToTopBtn.innerHTML = '<i class="bi bi-arrow-up"></i>';
-      scrollToTopBtn.className = 'btn btn-primary position-fixed';
-      scrollToTopBtn.style.cssText = `
-        bottom: 20px;
-        right: 20px;
-        z-index: 1000;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-      `;
-      document.body.appendChild(scrollToTopBtn);
-
-      scrollToTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-
-      // Show/hide scroll-to-top button
-      window.addEventListener('scroll', () => {
-        const shouldShow = window.scrollY > 300;
-        scrollToTopBtn.style.opacity = shouldShow ? '1' : '0';
-        scrollToTopBtn.style.visibility = shouldShow ? 'visible' : 'hidden';
-      });
     });
   </script>
-</body>
-
-</html>
 </body>
 
 </html>
