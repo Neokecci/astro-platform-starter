@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-P948MRGL');</script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-P948MRGL');</script>
   <!-- End Google Tag Manager -->
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Neokecci Multiconcepts Company Limited – Enterprise Development, Training, and Impact Assessment in the Niger Delta.">
+  <meta name="description" content="Neokecci Multiconcepts Company Limited – Enterprise Development, Training, and Impact Assessment in the Niger Delta.">
   <meta name="author" content="Neokecci Multiconcepts">
   <title>Neokecci Multiconcepts Company Limited</title>
 
@@ -28,8 +23,7 @@
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Neokecci Multiconcepts Company Limited">
-  <meta property="og:description"
-    content="Empowering businesses and communities through enterprise development, mentorship, and impactful projects.">
+  <meta property="og:description" content="Empowering businesses and communities through enterprise development, mentorship, and impactful projects.">
   <meta property="og:image" content="https://neokecci.com/assets/img/og-image.jpg">
   <meta property="og:url" content="https://neokecci.com/">
   <meta property="og:type" content="website">
@@ -38,8 +32,7 @@
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Neokecci Multiconcepts Company Limited">
-  <meta name="twitter:description"
-    content="Empowering the Niger Delta through enterprise development, training, and impact projects.">
+  <meta name="twitter:description" content="Empowering the Niger Delta through enterprise development, training, and impact projects.">
   <meta name="twitter:image" content="https://neokecci.com/assets/img/og-image.jpg">
 
   <!-- Verification Tags -->
@@ -47,6 +40,13 @@
   <meta name="facebook-domain-verification" content="e0iglf2pc9n6hmob22tyhnw1cjy7ga">
 
   <style>
+    :root {
+      --neokecci-red: #E63946;
+      --neokecci-blue: #1D9BF0;
+      --neokecci-dark: #2B2D42;
+      --neokecci-white: #FFFFFF;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -62,18 +62,37 @@
     /* Navigation */
     nav {
       background-color: #fff;
-      padding: 1rem 2rem;
+      padding: 0.75rem 2rem;
       position: fixed;
       width: 100%;
       top: 0;
       z-index: 100;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
     }
 
     nav.navbar-shrink {
-      background-color: #f4623a;
+      background-color: var(--neokecci-dark);
       padding: 0.5rem 2rem;
+    }
+
+    nav .logo-container {
+      display: flex;
+      align-items: center;
+      margin-right: 2rem;
+    }
+
+    nav .logo {
+      height: 50px;
+      width: auto;
+      margin-right: 0.5rem;
+      transition: height 0.3s ease;
+    }
+
+    nav.navbar-shrink .logo {
+      height: 40px;
     }
 
     nav a {
@@ -89,18 +108,18 @@
     }
 
     nav a:hover {
-      color: #f4623a;
+      color: var(--neokecci-blue);
     }
 
     nav.navbar-shrink a:hover {
-      color: #fff;
-      opacity: 0.8;
+      color: var(--neokecci-blue);
     }
 
     nav .brand {
       font-weight: bold;
       font-size: 1.2rem;
       margin-right: 3rem;
+      display: none;
     }
 
     /* Main content spacing */
@@ -118,7 +137,7 @@
     section h2 {
       font-size: 2rem;
       margin-bottom: 1.5rem;
-      color: #f4623a;
+      color: var(--neokecci-blue);
       text-align: center;
     }
 
@@ -129,7 +148,7 @@
 
     /* Hero Section */
     #hero {
-      background: linear-gradient(135deg, #f4623a 0%, #c34e2e 100%);
+      background: linear-gradient(135deg, var(--neokecci-red) 0%, var(--neokecci-blue) 100%);
       color: white;
       padding: 8rem 2rem;
       text-align: center;
@@ -160,7 +179,7 @@
     .btn {
       display: inline-block;
       padding: 0.75rem 2rem;
-      background-color: #f4623a;
+      background-color: var(--neokecci-blue);
       color: white;
       text-decoration: none;
       border-radius: 5px;
@@ -171,29 +190,37 @@
     }
 
     .btn:hover {
-      background-color: #c34e2e;
+      background-color: #1a87d6;
       transform: translateY(-2px);
     }
 
     .btn-light {
       background-color: white;
-      color: #f4623a;
+      color: var(--neokecci-blue);
     }
 
     .btn-light:hover {
       background-color: #f0f0f0;
-      color: #c34e2e;
+      color: #1a87d6;
+    }
+
+    .btn-red {
+      background-color: var(--neokecci-red);
+    }
+
+    .btn-red:hover {
+      background-color: #d62839;
     }
 
     /* Section backgrounds */
     #about {
-      background-color: #f4623a;
+      background-color: var(--neokecci-dark);
       color: white;
       max-width: 100%;
     }
 
     #about h2 {
-      color: white;
+      color: var(--neokecci-blue);
     }
 
     #about a {
@@ -206,14 +233,14 @@
     }
 
     #programmes-cta {
-      background-color: #212529;
+      background-color: var(--neokecci-dark);
       color: white;
       max-width: 100%;
       text-align: center;
     }
 
     #programmes-cta h2 {
-      color: #f4623a;
+      color: var(--neokecci-blue);
     }
 
     #contact {
@@ -234,24 +261,24 @@
       background: white;
       padding: 2rem;
       border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       text-align: center;
       transition: all 0.3s ease;
     }
 
     .fact-card {
-      border-top: 4px solid #f4623a;
+      border-top: 4px solid var(--neokecci-red);
     }
 
     .fact-card:hover,
     .service-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.15);
     }
 
     .fact-card h3,
     .service-card h3 {
-      color: #f4623a;
+      color: var(--neokecci-red);
       margin-bottom: 0.5rem;
     }
 
@@ -273,7 +300,7 @@
     .icon {
       font-size: 2.5rem;
       margin-bottom: 1rem;
-      color: #f4623a;
+      color: var(--neokecci-blue);
     }
 
     /* Form styling */
@@ -301,8 +328,8 @@
     form input:focus,
     form textarea:focus {
       outline: none;
-      border-color: #f4623a;
-      box-shadow: 0 0 0 3px rgba(244, 98, 58, 0.1);
+      border-color: var(--neokecci-blue);
+      box-shadow: 0 0 0 3px rgba(29, 155, 240, 0.1);
     }
 
     /* Contact info */
@@ -320,12 +347,12 @@
 
     .contact-item i {
       font-size: 2.5rem;
-      color: #f4623a;
+      color: var(--neokecci-red);
       margin-bottom: 1rem;
     }
 
     .contact-item a {
-      color: #f4623a;
+      color: var(--neokecci-blue);
       text-decoration: none;
     }
 
@@ -347,7 +374,7 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #f4623a;
+      background-color: var(--neokecci-red);
       color: white;
       width: 50px;
       height: 50px;
@@ -360,11 +387,11 @@
       font-size: 1.5rem;
       z-index: 999;
       transition: all 0.3s ease;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     }
 
     .scroll-to-top:hover {
-      background-color: #c34e2e;
+      background-color: #d62839;
       transform: translateY(-3px);
     }
 
@@ -408,16 +435,17 @@
     }
   </style>
 </head>
-
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P948MRGL" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P948MRGL" 
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- Navigation -->
   <nav id="mainNav">
-    <a href="#" class="brand">Neokecci Multiconcepts</a>
+    <div class="logo-container">
+      <img src="assets/img/logo.png" alt="Neokecci Logo" class="logo">
+    </div>
     <a href="#about">About</a>
     <a href="#facts">Facts</a>
     <a href="#services">Services</a>
@@ -437,20 +465,11 @@
     <!-- About Section -->
     <section id="about">
       <h2>About Us</h2>
-      <p>Neokecci Multiconcepts Company Limited is a Nigerian-based company founded in 2005 and incorporated in 2010 (RC
-        926675). We specialize in sustainable development, capacity building, and enterprise support across the Niger
-        Delta region. We assist multinational organizations in implementing community development projects, impact
-        assessments, and youth and women entrepreneurship programmes.</p>
-
-      <p>We are accredited Shell LiveWIRE trainers, having trained and mentored over 1,700 entrepreneurs and coordinated
-        over 242 rural development projects valued at over $10 million across 18 Niger Delta communities. Our expertise
-        also includes Monitoring and Evaluation (M&E), capacity building, impact assessment, and business coaching.</p>
-
-      <p>Currently, Neokecci is implementing the <strong>VIBES (Vocational, Innovation, Business, and Empowerment
-          Scheme)</strong> — a business training, mentorship, and coaching programme powered by Nigeria LNG Limited
-        (NLNG). The programme provides skills development, mentoring, and networking opportunities to both small and
-        large business owners. Visit the <a href="https://nlngvibes.com/" target="_blank">NLNG VIBES application
-          portal</a> to participate.</p>
+      <p>Neokecci Multiconcepts Company Limited is a Nigerian-based company founded in 2005 and incorporated in 2010 (RC 926675). We specialize in sustainable development, capacity building, and enterprise support across the Niger Delta region. We assist multinational organizations in implementing community development projects, impact assessments, and youth and women entrepreneurship programmes.</p>
+      
+      <p>We are accredited Shell LiveWIRE trainers, having trained and mentored over 1,700 entrepreneurs and coordinated over 242 rural development projects valued at over $10 million across 18 Niger Delta communities. Our expertise also includes Monitoring and Evaluation (M&E), capacity building, impact assessment, and business coaching.</p>
+      
+      <p>Currently, Neokecci is implementing the <strong>VIBES (Vocational, Innovation, Business, and Empowerment Scheme)</strong> — a business training, mentorship, and coaching programme powered by Nigeria LNG Limited (NLNG). The programme provides skills development, mentoring, and networking opportunities to both small and large business owners. Visit the <a href="https://nlngvibes.com/" target="_blank">NLNG VIBES application portal</a> to participate.</p>
     </section>
 
     <!-- Fast Facts Section -->
@@ -498,20 +517,18 @@
     <!-- Services Section -->
     <section id="services">
       <h2>Our Core Services</h2>
-
+      
       <div class="services-grid">
         <div class="service-card">
           <i class="bi bi-lightbulb icon"></i>
           <h3>Enterprise Development</h3>
-          <p>Design and delivery of youth and women-focused entrepreneurship programmes in partnership with
-            multinationals.</p>
+          <p>Design and delivery of youth and women-focused entrepreneurship programmes in partnership with multinationals.</p>
         </div>
 
         <div class="service-card">
           <i class="bi bi-mic icon"></i>
           <h3>Training & Mentoring</h3>
-          <p>Customized capacity building, business coaching, and mentorship for startups and SMEs across the Niger
-            Delta.</p>
+          <p>Customized capacity building, business coaching, and mentorship for startups and SMEs across the Niger Delta.</p>
         </div>
 
         <div class="service-card">
@@ -529,8 +546,7 @@
         <div class="service-card">
           <i class="bi bi-megaphone icon"></i>
           <h3>Media & Radio Production</h3>
-          <p>Development of business-oriented radio/TV shows, including over 400 editions of the Small Business Radio
-            Show.</p>
+          <p>Development of business-oriented radio/TV shows, including over 400 editions of the Small Business Radio Show.</p>
         </div>
 
         <div class="service-card">
@@ -544,18 +560,16 @@
     <!-- Programmes CTA Section -->
     <section id="programmes-cta">
       <h2>VIBES Programme</h2>
-      <p>Join the VIBES programme—powered by NLNG and implemented by Neokecci—for free expert-led training, mentorship,
-        networking, and access to grants and MSME loans. Empower your business and community today!</p>
+      <p>Join the VIBES programme—powered by NLNG and implemented by Neokecci—for free expert-led training, mentorship, networking, and access to grants and MSME loans. Empower your business and community today!</p>
       <a href="programmes.html" class="btn btn-light" style="margin-right: 1rem;">Learn More</a>
-      <a href="https://nlngvibes.com/" target="_blank" class="btn" style="background-color: #f4623a;">Apply Now</a>
+      <a href="https://nlngvibes.com/" target="_blank" class="btn btn-red">Apply Now</a>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
       <h2>Contact Us</h2>
-      <p style="text-align: center; margin-bottom: 2rem;">Ready to work with us? Get in touch and let's discuss your
-        needs.</p>
-
+      <p style="text-align: center; margin-bottom: 2rem;">Ready to work with us? Get in touch and let's discuss your needs.</p>
+      
       <form id="contactForm" name="contact" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="contact">
         <input type="text" name="name" placeholder="Your Name" required>
@@ -599,13 +613,13 @@
 
   <!-- JavaScript -->
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
       const nav = document.getElementById('mainNav');
       const scrollToTopBtn = document.getElementById('scrollToTop');
       const contactForm = document.getElementById('contactForm');
 
       // Navbar shrink on scroll
-      window.addEventListener('scroll', function () {
+      window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
           nav.classList.add('navbar-shrink');
         } else {
@@ -621,7 +635,7 @@
       });
 
       // Scroll to top functionality
-      scrollToTopBtn.addEventListener('click', function () {
+      scrollToTopBtn.addEventListener('click', function() {
         window.scrollTo({
           top: 0,
           behavior: 'smooth'
@@ -630,7 +644,7 @@
 
       // Smooth scroll for navigation links
       document.querySelectorAll('a[href^="#"]').forEach(link => {
-        link.addEventListener('click', function (e) {
+        link.addEventListener('click', function(e) {
           e.preventDefault();
           const target = document.querySelector(this.getAttribute('href'));
           if (target) {
@@ -645,10 +659,10 @@
 
       // Contact form handling
       if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
+        contactForm.addEventListener('submit', function(e) {
           const btn = this.querySelector('button[type="submit"]');
           const originalText = btn.textContent;
-
+          
           btn.textContent = 'Sending...';
           btn.disabled = true;
 
@@ -663,5 +677,4 @@
     });
   </script>
 </body>
-
 </html>
